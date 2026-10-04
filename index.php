@@ -25,7 +25,7 @@
    $generated_text = shell_exec("python $python_script_path $final_input");
 
    // Display the generated text in a textarea
-   echo "<textarea rows='4' cols='50'>$generated_text</textarea>";
+   echo "<textarea rows='4' cols='50'>" . htmlspecialchars($generated_text, ENT_QUOTES, 'UTF-8') . "</textarea>";
     }
     else{
         echo "Please Input Text";
@@ -33,4 +33,3 @@
 ?>
 </body>
 </html>
-
